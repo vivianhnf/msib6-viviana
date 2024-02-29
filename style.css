@@ -1,0 +1,108 @@
+/* CSS untuk semua halaman */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #FFB6C1; 
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: #FF69B4; 
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container-satu {
+  display: flex;
+  align-items: center; 
+  margin-top: 1%; /* Beri sedikit ruang di atas container */
+}
+
+.slide-kiri,
+.slide-tengah,
+.slide-kanan {
+  padding: 20px;
+  margin: 0 10px; /* Tambahkan sedikit ruang di sekitar setiap slide */
+}
+
+.slide-tengah {
+  flex: 1; 
+  background-color: #FFCCCC; 
+  text-align: center; 
+  font-size: 15px; 
+}
+
+.slide-kiri {
+  background-color: #FFCCCC; 
+}
+
+.slide-kanan {
+  background-color: #FFCCCC; 
+}
+
+footer {
+  background-color: #FF69B4; 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10%; /* Geser footer ke bawah halaman */
+}
+
+/* CSS untuk halaman home.html */
+body[bgcolor="pink"] {
+  background-color: #FFCCCC; /* Warna pastel pinky pinky lucu */
+}
+
+/* CSS untuk halaman mystudy.html */
+#pendidikan {
+  padding: 10%;
+}
+
+#pendidikan h2 {
+  margin-bottom: 10px;
+}
+
+#pendidikan ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#pendidikan ul li {
+  margin-bottom: 50px;
+}
+
+/* CSS khusus untuk halaman gallery.html */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery-item {
+  margin-bottom: 50px;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  height: auto;
+}
