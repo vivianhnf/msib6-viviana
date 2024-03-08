@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pegawai PT. Mencari Cinta Sejati</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #ff8bd7;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Data Pegawai PT. Mencari Cinta Sejati </h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nama Pegawai</th>
+            <th>Jabatan</th>
+            <th>Status</th>
+            <th>Gaji Pokok</th>
+            <th>Tunjangan Jabatan</th>
+            <th>BPJS</th>
+            <th>Tunjangan Keluarga</th>
+            <th>Total Gaji</th>
+        </tr>
+    </thead>
+    <tbody id="dataPegawai">
+    </tbody>
+    <tfoot id="totalGaji">
+    </tfoot>
+</table>
+
+<script>
+    // Data Pegawai
+    const pegawai = {
+        nama: "Ridwan",
+        jabatan: "Manager",
+        status: "Menikah"
+    };
+
+    //ini menghitung Gaji Pokok
+    let gajiPokok;
+    switch (pegawai.jabatan) {
+        case "Manager":
+            gajiPokok = 15000000;
+            break;
+        case "Asisten Manager":
+            gajiPokok = 10000000;
+            break;
+        case "Staff":
+            gajiPokok = 5000000;
+            break;
+        default:
+            gajiPokok = 0;
+    }
+
+    //ini menghitung Tunjangan Jabatan
+    const tunjanganJabatan = gajiPokok * 0.15;
+
+    //ini menghitung BPJS
+    const bpjs = gajiPokok * 0.1;
+
+    //ini menghitung Tunjangan Keluarga
+    const tunjanganKeluarga = pegawai.status === "Menikah" ? gajiPokok * 0.2 : 0;
+
+    //ini menghitung Total Gaji
+    const totalGaji = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+    //ini untuk menampilkan Data Pegawai
+    const dataPegawai = document.getElementById('dataPegawai');
+    const newRow = dataPegawai.insertRow();
+    newRow.innerHTML = `
+        <td>${pegawai.nama}</td>
+        <td>${pegawai.jabatan}</td>
+        <td>${pegawai.status}</td>
+        <td>${gajiPokok}</td>
+        <td>${tunjanganJabatan}</td>
+        <td>${bpjs}</td>
+        <td>${tunjanganKeluarga}</td>
+        <td>${totalGaji}</td>
+    `;
+
+    //ini untuk menampilkan Total Gaji
+    const totalGajiRow = document.getElementById('totalGaji');
+    const totalRow = totalGajiRow.insertRow();
+    totalRow.innerHTML = `<td colspan="7" style="text-align: right;">Total Gaji:</td><td>${totalGaji}</td>`;
+</script>
+
+</body>
+</html>
