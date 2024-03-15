@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JS Eksternal</title>
+</head>
+<body>
+    <form id="frm">
+        <table border="1px solid" style="width: 30%; background-color: rgb(234, 255, 128); border: 1px solid; text-align: center;
+        margin: auto;">
+            <tr>
+                <th colspan="2">Form Input</th>
+            </tr>
+            <tr>
+                <td><label for="nama">NAMA</label></td>
+                <td>
+                    <input type="text" name="nama" id="nama" placeholder="Masukan nama anda">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="kerja">PEKERJAAN</label></td>
+                <td>
+                    <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Masukan pekerjaan anda">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="hobby">HOBBY</label></td>
+                <td>
+                    <input type="text" name="hobby" id="hobby" placeholder="Masukan hobby anda">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <button type="button" onclick="dataperson()">Submit</button>
+                </th>
+            </tr>
+        </table>
+    </form>
+    <h2 style="text-align: center; background-color: rgb(0, 0, 0);"  id="hasil"></h2>
+    <script src="js/skripjs.js"></script>
+</body>
+</html>
